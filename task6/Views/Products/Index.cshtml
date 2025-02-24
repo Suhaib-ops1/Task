@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Task6.Models.Product>
+﻿@model IEnumerable<task6.Models.Product>
 
 @{
     ViewData["Title"] = "Index";
@@ -10,7 +10,7 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-<div class="d-flex">
+<div class="d-flex gap-5 justify-content-center">
     @foreach (var item in Model)
     {
         <div class="card" style="width: 18rem;">

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex">
+        <nav class="bg-dark text-white p-3" style="width: 250px; height: 95vh;">
+            <h3>Admin Menu</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" asp-action="UsersView">Users</a></li>
+                <li class="nav-item"><a class="nav-link text-white" asp-action="ProductView">Products</a></li>
+                <li class="nav-item"><a class="nav-link text-white" asp-action="Logout">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="container mt-4">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2025 Copyright:
+            <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+</html>

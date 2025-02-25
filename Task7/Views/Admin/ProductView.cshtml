@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Task7.Models.Product>
+
+@{
+    ViewData["Title"] = "ProductView";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>ProductView</h1>
+
+<p>
+    <a asp-action="ProductCreate">Create New</a>
+</p>
+<div class="d-flex justify-content-center gap-3">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="@item.Image" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">@item.Description</p>
+                <h5 class="card-title">@item.Price</h5>
+
+                <a class="btn btn-primary" asp-action="ProductDetails" asp-route-id="@item?.Id">Details</a>
+                <a class="btn btn-warning" asp-action="ProductEdit" asp-route-id="@item?.Id">Edit</a>
+                <a class="btn btn-danger" asp-action="ProductDelete" asp-route-id="@item?.Id">Delete</a>
+
+            </div>
+        </div>
+
+    }
+</div>
